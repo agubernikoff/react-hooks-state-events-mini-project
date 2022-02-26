@@ -21,6 +21,7 @@ function NewTaskForm({ CATEGORIES, onTaskFormSubmit }) {
       category: categoryInput,
     };
     onTaskFormSubmit(newObj);
+    e.target.reset();
   }
 
   return (
