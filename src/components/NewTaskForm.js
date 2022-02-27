@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function NewTaskForm({ CATEGORIES, onTaskFormSubmit }) {
-  const filteredCats = CATEGORIES.filter((cat) => cat !== "All");
+function NewTaskForm({ categories, onTaskFormSubmit }) {
+  const filteredCats = categories.filter((cat) => cat !== "All");
   const mappedCats = filteredCats.map((cat) => (
     <option key={cat}>{cat}</option>
   ));
@@ -21,7 +21,7 @@ function NewTaskForm({ CATEGORIES, onTaskFormSubmit }) {
       category: categoryInput,
     };
     onTaskFormSubmit(newObj);
-    e.target.reset();
+    // e.target.reset();
   }
 
   return (

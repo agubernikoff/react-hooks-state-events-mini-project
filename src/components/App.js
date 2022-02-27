@@ -27,12 +27,12 @@ function App() {
     <div className="App">
       <h2>My tasks</h2>
       <CategoryFilter
-        CATEGORIES={CATEGORIES}
+        categories={CATEGORIES}
         handleClick={handleClick}
         selectedCategory={selectedCategory}
       />
       <NewTaskForm
-        CATEGORIES={CATEGORIES}
+        categories={CATEGORIES}
         onTaskFormSubmit={onTaskFormSubmit}
       />
       <TaskList tasks={filteredTasks} />
